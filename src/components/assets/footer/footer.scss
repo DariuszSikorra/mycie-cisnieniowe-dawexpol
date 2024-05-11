@@ -1,0 +1,28 @@
+@import "../styleConstants/variables.scss";
+
+.footer__navlinks {
+  grid-column: 1 / 2;
+  .footer__button {
+    padding: 2px;
+    .button__link {
+      text-decoration: none;
+      color: $light;
+    }
+    .button__link:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.footer__contact {
+  grid-column: 2 / 3;
+  list-style: none;
+  li {
+    padding: 2px;
+  }
+}
+.footer__navlinks,
+.footer__contact {
+  display: flex;
+  justify-items: flex-start;
+  flex-direction: column;
+}

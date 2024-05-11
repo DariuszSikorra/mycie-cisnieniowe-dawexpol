@@ -1,0 +1,72 @@
+@import "../styleConstants/variables.scss";
+
+@media (min-width: $smallScreens) {
+  .navbar {
+    justify-content: center;
+    background-color: $semitransparent;
+    list-style-type: none;
+    padding: 1px;
+    margin: 0;
+    .navbar__button {
+      font-family: $firstFont;
+      font-weight: 700;
+      font-size: calc(10px + 1.2vmin);
+      align-self: center;
+      border: 0;
+      box-sizing: border-box;
+      margin: 1.2rem;
+      padding: 0.1rem 0.7rem;
+      position: relative;
+      display: grid;
+      .button__link {
+        text-decoration-line: inherit;
+        color: $light;
+        cursor: pointer;
+        user-select: none;
+        z-index: 4;
+      }
+      .button__link--background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+@media (min-width: $largeScreens) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: $semitransparent;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    .navbar__button {
+      font-family: $firstFont;
+      font-weight: 700;
+      font-size: calc(8px + 1.5vmin);
+      align-self: center;
+      border: 0;
+      box-sizing: border-box;
+      margin: 1.2rem;
+      padding: 0.6rem 1.2rem;
+      position: relative;
+      display: grid;
+      .button__link {
+        text-decoration-line: inherit;
+        color: $light;
+        cursor: pointer;
+        user-select: none;
+        z-index: 4;
+      }
+      .button__link--background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+    }
+  }
+}

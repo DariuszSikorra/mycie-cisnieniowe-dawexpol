@@ -1,0 +1,25 @@
+.main--questionsForm {
+  .main__content {
+    .content__questionBox {
+      .questionBox__question {
+        display: inline-flex;
+        cursor: pointer;
+        user-select: none;
+        border-bottom: 2px solid gray;
+        width: 80%;
+        .question__text {
+          margin: 0 0 10px 23px;
+        }
+      }
+      .questionBox__response {
+        display: flex;
+        width: 70%;
+        border: 2px solid gray;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top: none;
+        padding: 10px;
+      }
+    }
+  }
+}
