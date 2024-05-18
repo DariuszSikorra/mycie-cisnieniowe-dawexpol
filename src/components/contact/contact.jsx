@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./contact.scss"
+import "./contact.scss";
 
 const Contact = () => {
   return (
-    <div className="main main--contact" style={{color: "black "}}>
+    <div className="main main--contact" style={{ color: "black " }}>
       <h1 className="main__title">Kontakt</h1>
       <hr />
       <div className="main__content">
@@ -16,9 +16,16 @@ const Contact = () => {
         <br />
         <div className="content__contactkBox">
           <div className="contactkBox__item1">Tel:</div>
-          <div className="contactkBox__item2">+48 798 450 170</div>
+          <div className="contactkBox__item2">
+            <ul style={{listStyle: "none"}}>
+              <li>+48 729 534 719</li>
+              <li>+48 798 450 170</li>
+            </ul>
+          </div>
           <div className="contactkBox__item3">E-mail:</div>
-          <div className="contactkBox__item4">dawexpolpiaskowanie@gmail.com</div>
+          <div className="contactkBox__item4">
+            dawexpolpiaskowanie@gmail.com
+          </div>
         </div>
         <p>Sprawdź nas także na Facebook'u:</p>
         <div

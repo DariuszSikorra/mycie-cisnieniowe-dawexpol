@@ -26,6 +26,7 @@ const Footer = props => {
       <ul className="footer__contact">
         <li><strong>Kontakt:</strong></li>
         <li>Krzysztof Sikorra</li>
+        <li>+48 729 534 719</li>
         <li>+48 798 450 170</li>
       </ul>
     </>

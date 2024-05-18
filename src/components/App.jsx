@@ -4,7 +4,6 @@ import { spring, AnimatedSwitch } from "react-router-transition";
 
 import Navbar from "./assets/navbar/navbar";
 import Contact from "./contact/contact";
-import Offer from "./offer/offer";
 import Gallery from "./gallery/gallery";
 import Home from "./home/home";
 import QuestionsForm from "./questionsForm/questionsForm";
@@ -16,13 +15,6 @@ import wall from "./assets/wall_mk.2.jpg";
 
 const pages = [
   { id: 1, exact: true, path: "/", component: Home, name: "O nas" },
-  {
-    id: 2,
-    exact: false,
-    path: "/offer",
-    component: Offer,
-    name: "Oferta"
-  },
   {
     id: 3,
     exact: false,

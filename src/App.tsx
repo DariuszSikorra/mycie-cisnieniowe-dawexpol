@@ -14,13 +14,13 @@ import wall from "./components/assets/wall_mk.2.jpg";
 
 const pages = [
   { id: 1, exact: true, path: "/", component: Home, name: "O nas" },
-  {
-    id: 2,
-    exact: false,
-    path: "/offer",
-    component: Offer,
-    name: "Oferta",
-  },
+  // {
+  //   id: 2,
+  //   exact: false,
+  //   path: "/offer",
+  //   component: Offer,
+  //   name: "Oferta",
+  // },
   {
     id: 3,
     exact: false,

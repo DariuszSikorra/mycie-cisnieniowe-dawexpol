@@ -1,104 +1,92 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CleanImage from "../../assets/images/438125044_935833158553962_1945687870856661188_n.jpg";
+import CleanImage2 from "../../assets/images/438089822_1104436250852636_957264799924397053_n.jpg";
+import CleanImage3 from "../../assets/images/438064978_1001987594929112_7955168384531912098_n.jpg";
 
-import "./home.scss"
+import "./home.scss";
 
-const Home = props => {
+const Home = (props) => {
   return (
-    <div className="main main--home" style={{color: "black"}}>
+    <div className="main main--home" style={{ color: "black" }}>
       <h1 className="main__title">Dawex-POL</h1>
       <hr />
       <div className="main__content">
-        <h3>Czym się zajmujemy?</h3>
+        <h3>Witamy na stronie naszej firmy sprzątającej!</h3>
         <div className="content__textWithPhoto">
           <p>
-            Nasz firma zajmuje się hydropiaskowaniem i myciem powierzchni
-            karcherem z dojazdem do klienta. Posiadamy wyposażenie umożliwiające
-            pracę w bezpiecznych warunkach, bez pylenia. Dzięki temu możemy
-            pracować na zawnątrz jak i w pomieszczeniach zamkniętych.
+            Jesteśmy dumni, że możemy zaoferować Państwu kompleksowe usługi
+            czyszczenia powierzchni zewnętrznych. Nasza firma specjalizuje się w
+            przywracaniu czystości i estetyki kostki brukowej, elewacji oraz
+            innych powierzchni wokół Państwa domu i firmy.
           </p>
-          <img
-            src="https://i.ytimg.com/vi/u4bcSmm_R00/maxresdefault.jpg"
-            alt="home1"
-          />
+          <img src={CleanImage} alt="home1" />
         </div>
-        <h3>Czym jest Hydropiaskowanie?</h3>
-        <br />
+        <h3>O Nas</h3>
         <div className="content__textWithPhoto">
-          <img
-            src="https://i.ytimg.com/vi/ywbLmPbqrkM/maxresdefault.jpg"
-            alt="home2"
-          />
+          <img src={CleanImage2} alt="home1" />
           <p>
-            Hydropiaskowanie jest jedną z metod czyszczenia- piaskowaniem na
-            mokro. Ten sposób mycia powierzchni polecany jest zwłaszcza do
-            usuwania trudnych zabrudzeń, na rozległych powierzchniach oraz
-            starych zanieczyszczeń, które już zdążyły w dużym stopniu nadbudować
-            się np. na elewacji budynku.
+            Jeśli cieszy cię czysta powierzchnia wokół swojego domu, zadbamy,
+            aby Twoja kostka brukowa, elewacja znów wyglądała czysto i
+            estetycznie. Posiadamy specjalistyczny, markowy sprzęt oraz
+            odpowiednie preparaty, dzięki którym usuniemy wszelakie zabrudzenia
+            z Twojej kostki brukowej, elewacji, ogrodzenia. Nie straszny nam
+            mech, porosty, trawa, usuniemy nawet najtrwalsze zabrudzenia, które
+            przez lata nie pozwalały o sobie zapomnieć.
           </p>
         </div>
-        <br />
+        <h3>Nasze Usługi</h3>
+        <div className="content__textWithPhoto">
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <p>
+              Oferujemy szeroki zakres usług, które spełnią oczekiwania nawet
+              najbardziej wymagających klientów. W naszej ofercie znajdziesz:
+            </p>
+            <ul>
+              <li>Czyszczenie Kostki Brukowej</li>
+              <li>Impregnacja Kostki Brukowej</li>
+              <li>Mycie Elewacji</li>
+              <li>Czyszczenie Tarasów</li>
+              <li>Mycie Wiat</li>
+              <li>Czyszczenie Hal Produkcyjnych i Magazynowych</li>
+              <li>Mycie Płotów i Ogrodzeń</li>
+              <li>Czyszczenie Garaży</li>
+              <li>Odgrzybianie</li>
+            </ul>
+            <p>
+              Nasze myjki spalinowe z podgrzewaniem wody do 95°C skutecznie
+              usuną wszelkie zabrudzenia, pozostawiając powierzchnie
+              nieskazitelnie czyste.
+            </p>
+          </div>
+
+          <img src={CleanImage3} alt="home1" />
+        </div>
+        <h3>Kontakt</h3>
+        <div
+          className="content__textWithPhoto"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
+          <p>
+            Zapraszamy do kontaktu! Oferujemy darmową wycenę, dzięki czemu
+            możesz z łatwością zaplanować swój budżet. Skontaktuj się z nami,
+            aby dowiedzieć się więcej o naszych usługach i umówić się na wizytę.
+          </p>
+          <p>
+            Telefon:
+            <ul style={{listStyle: "none"}}>
+              <li>+48 729 534 719</li>
+              <li>+48 798 450 170</li>
+            </ul>
+            Serdecznie zapraszam, Krzysztof
+          </p>
+        </div>
         <p>
-          O hydropiaskowaniu powszechnie wiadomo, że jest to najbardziej
-          skuteczna metoda czyszczenia. Posiada jednak niezliczoną ilość zalet,
-          decydujących o jej popularności:
-        </p>
-        <ol>
-          <li>
-            Dzięki hydropiaskowaniu można perfekcyjnie wyczyścić daną
-            powierzchnię.
-          </li>
-          <li>
-            Czyszczenie piaskowaniem na mokro nie wpływa negatywnie na
-            środowisko naturalne, jest zatem metodą w pełni ekologiczną
-            Hydropiaskowanie jest w pełni bezpieczne – nie powoduje zagrożenia
-            dla zdrowia.
-          </li>
-          <li>
-            Jedną z najkorzystniejszych finansowo metod jest właśnie metoda
-            hydropiaskowania. Cena usługi jest bardzo przystępna Zastosowanie
-            piaskowania na mokro pozwala wyczyścić różnego rodzaju powierzchnie.
-            Można zatem w trakcie jednej wizyty fachowców umyć wiele materiałów
-          </li>
-        </ol>
-        <br />
-        <h3>
-          Jakie powierzchnie można wyczyścić przy pomocy hydropiaskowania?
-        </h3>
-        <p>
-          Zastosowanie metody piaskowania na mokro pozwoli pozbyć się wielu
-          różnych zabrudzeń. Dzięki hydropiaskowaniu można pozbyć się
-          nieestetycznego graffiti z murów, niepożądanych glonów występujących
-          na elewacjach, szpecącej elementy metalowe rdzy, a także resztek farb
-          i cementu pozostałych po remoncie.
-        </p>
-        <br />
-        <p>
-          Korzystając z usługi piaskowania na mokro, mamy gwarancję przywrócenia
-          elewacji budynku do stanu niemalże nowości! Hydropiaskowanie świetnie
-          sprawdzi się również w przypadku konieczności uprzątnięcia przestrzeni
-          publicznej – doczyści ławki, fasady nieruchomości, asfalt, czy kostkę
-          brukową. Metodę piaskowania na mokro można śmiało nazwać remedium na
-          wszelkie plamy i zanieczyszczenia. Czyszczenie przy pomocy techniki
-          hydropiaskowania jest doskonałe do zastosowania w przypadku
-          konieczności uprzątnięcia rozległych powierzchni.
-        </p>
-        <br />
-        <p>
-          Dzięki piaskowaniu na mokro można idealnie wyczyścić takie materiały
-          jak:
-        </p>
-        <ul>
-          <li>cegła,</li>
-          <li>kamień,</li>
-          <li>beton,</li>
-          <li>metal,</li>
-          <li>piaskowiec,</li>
-          <li>tworzywa sztuczne,</li>
-          <li>drewno.</li>
-        </ul>
-        <p>
-          Zobacz więcej w naszej{" "}
+          Zobacz więcej zdjęć w naszej{" "}
           <Link
             className="button__link"
             key={props.pages[3].path}
