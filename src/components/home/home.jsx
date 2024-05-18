@@ -89,8 +89,8 @@ const Home = (props) => {
           Zobacz więcej zdjęć w naszej{" "}
           <Link
             className="button__link"
-            key={props.pages[3].path}
-            to={props.pages[3].path}
+            key={props.pages[2].path}
+            to={props.pages[2].path}
           >
             galerii!
           </Link>
