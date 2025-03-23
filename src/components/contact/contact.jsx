@@ -17,9 +17,8 @@ const Contact = () => {
         <div className="content__contactkBox">
           <div className="contactkBox__item1">Tel:</div>
           <div className="contactkBox__item2">
-            <ul style={{listStyle: "none"}}>
+            <ul style={{ listStyle: "none" }}>
               <li>+48 729 534 719</li>
-              <li>+48 798 450 170</li>
             </ul>
           </div>
           <div className="contactkBox__item3">E-mail:</div>

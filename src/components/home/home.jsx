@@ -78,9 +78,8 @@ const Home = (props) => {
           </p>
           <p>
             Telefon:
-            <ul style={{listStyle: "none"}}>
+            <ul style={{ listStyle: "none" }}>
               <li>+48 729 534 719</li>
-              <li>+48 798 450 170</li>
             </ul>
             Serdecznie zapraszam, Krzysztof
           </p>
