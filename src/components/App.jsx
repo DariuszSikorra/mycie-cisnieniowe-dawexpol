@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
-// COMPONENTS
 import Navbar from "./assets/navbar/navbar";
 import Contact from "./contact/contact";
 import Gallery from "./gallery/gallery";
@@ -10,10 +9,8 @@ import QuestionsForm from "./questionsForm/questionsForm";
 import ErrorPage from "./errorPage/errorPage";
 import Footer from "./assets/footer/footer";
 
-// STYLES
 import "./App.scss";
 
-// IMPORT MULTIPLE VERSIONS OF YOUR IMAGE
 import wallSmall from "./assets/wall_small.jpg";
 import wallMedium from "./assets/wall_medium.jpg";
 import wallLarge from "./assets/wall_large.jpg";
@@ -33,43 +30,19 @@ const pages = [
 function App() {
   return (
     <div className="app">
+      {/* Switch from BrowserRouter to HashRouter */}
       <Router>
         <div className="app__navbar">
           <Navbar pages={pages} />
         </div>
 
         <div className="app__image">
-          {/* 
-            Option 1: Using <picture> with multiple <source> tags.
-            The browser will automatically pick the first <source> 
-            whose media condition matches.
-          */}
           <picture>
             <source srcSet={wallSmall} media="(max-width: 600px)" />
             <source srcSet={wallMedium} media="(max-width: 1200px)" />
             {/* Fallback or large version */}
             <img className="image" src={wallLarge} alt="WetsandingImage" />
           </picture>
-
-          {/*
-            Option 2 (alternative): Using srcSet + sizes directly in <img>:
-            
-            <img
-              className="image"
-              src={wallLarge}
-              alt="WetsandingImage"
-              srcSet={`
-                ${wallSmall} 600w,
-                ${wallMedium} 1200w,
-                ${wallLarge} 2000w
-              `}
-              sizes="
-                (max-width: 600px) 600px,
-                (max-width: 1200px) 1200px,
-                2000px
-              "
-            />
-          */}
         </div>
 
         <div className="app__main">
