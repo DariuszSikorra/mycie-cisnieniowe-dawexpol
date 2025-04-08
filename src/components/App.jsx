@@ -30,7 +30,6 @@ const pages = [
 function App() {
   return (
     <div className="app">
-      {/* Switch from BrowserRouter to HashRouter */}
       <Router>
         <div className="app__navbar">
           <Navbar pages={pages} />
@@ -40,7 +39,6 @@ function App() {
           <picture>
             <source srcSet={wallSmall} media="(max-width: 600px)" />
             <source srcSet={wallMedium} media="(max-width: 1200px)" />
-            {/* Fallback or large version */}
             <img className="image" src={wallLarge} alt="WetsandingImage" />
           </picture>
         </div>

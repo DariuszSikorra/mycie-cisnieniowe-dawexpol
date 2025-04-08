@@ -1,18 +1,15 @@
 import React from "react";
-import NavbarButton from "./navbarButton"
-import { useLocation } from "react-router";
-import "./navbar.scss"
+import NavbarButton from "./navbarButton";
+import "./navbar.scss";
 
-const Navbar = props => {
-  let location = useLocation()
-  console.log(location)
+const Navbar = ({ pages }) => {
   return (
     <ul className="navbar">
-      {props.pages.map(page => {
-        return (
-          <NavbarButton page={page} location={location} />
-        );
-      })}
+      {pages.map((page) => (
+        <li key={page.id} className="navbar__button navbar__button--animation">
+          <NavbarButton page={page} />
+        </li>
+      ))}
     </ul>
   );
 };
