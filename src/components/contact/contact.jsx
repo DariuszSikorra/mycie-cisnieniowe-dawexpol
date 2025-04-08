@@ -41,8 +41,11 @@ const Contact = () => {
             cite="https://www.facebook.com/Dawex-POL-Hyrdopiaskowanie-102353551176728/"
             className="fb-xfbml-parse-ignore"
           >
-            <a href="https://www.facebook.com/Dawex-POL-Hyrdopiaskowanie-102353551176728/">
-              Dawex-POL Hyrdopiaskowanie
+            <a
+              href="https://www.facebook.com/Dawex-POL-Hyrdopiaskowanie-102353551176728/"
+              target="_blank"
+            >
+              Dawex-POL Mycie kostki i elewacji
             </a>
           </blockquote>
         </div>
