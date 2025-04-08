@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { spring, AnimatedSwitch } from "react-router-transition";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// COMPONENTS
 import Navbar from "./assets/navbar/navbar";
 import Contact from "./contact/contact";
 import Gallery from "./gallery/gallery";
@@ -10,49 +10,25 @@ import QuestionsForm from "./questionsForm/questionsForm";
 import ErrorPage from "./errorPage/errorPage";
 import Footer from "./assets/footer/footer";
 
+// STYLES
 import "./App.scss";
-import wall from "./assets/wall_mk.2.jpg";
+
+// IMPORT MULTIPLE VERSIONS OF YOUR IMAGE
+import wallSmall from "./assets/wall_small.jpg";
+import wallMedium from "./assets/wall_medium.jpg";
+import wallLarge from "./assets/wall_large.jpg";
 
 const pages = [
-  { id: 1, exact: true, path: "/", component: Home, name: "O nas" },
-  {
-    id: 3,
-    exact: false,
-    path: "/contact",
-    component: Contact,
-    name: "Kontakt"
-  },
+  { id: 1, path: "/", component: Home, name: "O nas" },
+  { id: 2, path: "/contact", component: Contact, name: "Kontakt" },
+  { id: 3, path: "/gallery", component: Gallery, name: "Galeria" },
   {
     id: 4,
-    exact: false,
-    path: "/gallery",
-    component: Gallery,
-    name: "Galeria"
-  },
-  {
-    id: 5,
-    exact: false,
     path: "/questionsForm",
     component: QuestionsForm,
-    name: "Najczęstsze pytania"
-  }
-];
- 
-function bounce(val) {
-  return spring(val, {
-    stiffness: 30
-  });
-}
-
-const opacityTransition = {
-  atEnter: {
-    opacity: 0
+    name: "Najczęstsze pytania",
   },
-  atLeave: {},
-  atActive: {
-    opacity: bounce(1)
-  }
-};
+];
 
 function App() {
   return (
@@ -61,26 +37,54 @@ function App() {
         <div className="app__navbar">
           <Navbar pages={pages} />
         </div>
+
         <div className="app__image">
-          <img className="image" src={wall} alt="WetsandingImage" />
+          {/* 
+            Option 1: Using <picture> with multiple <source> tags.
+            The browser will automatically pick the first <source> 
+            whose media condition matches.
+          */}
+          <picture>
+            <source srcSet={wallSmall} media="(max-width: 600px)" />
+            <source srcSet={wallMedium} media="(max-width: 1200px)" />
+            {/* Fallback or large version */}
+            <img className="image" src={wallLarge} alt="WetsandingImage" />
+          </picture>
+
+          {/*
+            Option 2 (alternative): Using srcSet + sizes directly in <img>:
+            
+            <img
+              className="image"
+              src={wallLarge}
+              alt="WetsandingImage"
+              srcSet={`
+                ${wallSmall} 600w,
+                ${wallMedium} 1200w,
+                ${wallLarge} 2000w
+              `}
+              sizes="
+                (max-width: 600px) 600px,
+                (max-width: 1200px) 1200px,
+                2000px
+              "
+            />
+          */}
         </div>
+
         <div className="app__main">
-          <AnimatedSwitch
-            atEnter={opacityTransition.atEnter}
-            atLeave={opacityTransition.atLeave}
-            atActive={opacityTransition.atActive}
-          >
-            {pages.map(page => (
+          <Routes>
+            {pages.map((page) => (
               <Route
-                exact={page.exact}
+                key={page.id}
                 path={page.path}
-                key={page.key}
-                render={props => <page.component {...props} pages={pages} />}
+                element={<page.component pages={pages} />}
               />
             ))}
-            <Route component={ErrorPage} />
-          </AnimatedSwitch>
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
         </div>
+
         <div className="app__footer">
           <Footer pages={pages} />
         </div>
