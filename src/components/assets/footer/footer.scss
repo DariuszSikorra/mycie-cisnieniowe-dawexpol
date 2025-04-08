@@ -1,5 +1,9 @@
 @import "../styleConstants/variables.scss";
 
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
 .footer__navlinks {
   grid-column: 1 / 2;
   .footer__button {
@@ -25,4 +29,12 @@
   display: flex;
   justify-items: flex-start;
   flex-direction: column;
+}
+.footer__logo {
+  /* example styling */
+  img {
+    max-width: 150px;  /* adjust as desired */
+    height: auto;
+    margin-top: 4px;
+  }
 }
