@@ -1,4 +1,4 @@
-@import "../assets/styleConstants/variables.scss";
+@use  "../assets/styleConstants/variables.scss" as *;
 
 
 @media only screen and (max-width: 844px) {

@@ -1,6 +1,6 @@
 import React from "react";
 
-const MasonryLayout = props => {
+const MasonryLayout = (props) => {
   const columnWrapper = {};
   const result = [];
 
@@ -21,9 +21,10 @@ const MasonryLayout = props => {
   for (let i = 0; i < props.columns; i++) {
     result.push(
       <div
+        key={i}
         style={{
           marginLeft: `${i > 0 ? props.gap : 0}px`,
-          flex: 1
+          flex: 1,
         }}
       >
         {columnWrapper[`column${i}`]}
