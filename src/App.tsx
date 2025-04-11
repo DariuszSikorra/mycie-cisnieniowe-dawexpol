@@ -6,6 +6,7 @@ import Home from "./components/home/home";
 import QuestionsForm from "./components/questionsForm/questionsForm";
 import ErrorPage from "./components/errorPage/errorPage";
 import Footer from "./components/assets/footer/footer";
+import CallIcon from "@mui/icons-material/Call";
 
 import Navbar from "./components/navbar/navbar"; // <-- NEW import
 
@@ -60,6 +61,7 @@ function App() {
           <Button
             variant="contained"
             onClick={handleContactClick}
+            endIcon={<CallIcon />}
             style={{
               position: "absolute",
               top: "50%",
@@ -69,7 +71,7 @@ function App() {
               padding: "0.55rem 0.5rem",
             }}
           >
-            Umów się na wycenę!
+            Umów się na wycenę
           </Button>
           <img className="image" src={wall} alt="WetsandingImage" />
         </div>
