@@ -18,7 +18,9 @@
     "noUnusedLocals": false,   // Disabling to reduce strictness, adjust per your needs
     "noUnusedParameters": false, // Disabling to reduce strictness, adjust per your needs
     "noFallthroughCasesInSwitch": true,
-    "noEmitOnError": false     // Continues to emit output even if there are errors
+    "noEmitOnError": false,     // Continues to emit output even if there are errors
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],

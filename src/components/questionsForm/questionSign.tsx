@@ -1,27 +1,30 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
-
+import { useSpring, animated } from "@react-spring/web";
 import svgSign from "../assets/minus.svg";
 
-const QuestionSign = props => {
-  const turnLeft = useSpring({
-    transform: props.visibility ? "rotate(0deg)" : "rotate(90deg)",
-    width: "15px",
-    height: "15px",
-    position: "absolute"
+interface QuestionSignProps {
+  visibility: boolean;
+}
+
+const QuestionSign: React.FC<QuestionSignProps> = ({ visibility }) => {
+  const turnStyle = useSpring({
+    transform: visibility ? "rotate(0deg)" : "rotate(90deg)",
   });
-  const svgStyle = {
+
+  const staticStyle: React.CSSProperties = {
     width: "15px",
     height: "15px",
-    position: "absolute"
+    position: "absolute",
+    top: -15,
   };
 
-  const alt = "minus"
-
   return (
-    <span>
-        <animated.img style={turnLeft} src={svgSign} alt={alt}/>
-        <img style={svgStyle} src={svgSign} alt={alt}/>
+    <span style={{ position: "relative", display: "inline-block" }}>
+      <animated.img
+        style={{ ...staticStyle, ...turnStyle }}
+        src={svgSign}
+        alt="minus"
+      />
     </span>
   );
 };

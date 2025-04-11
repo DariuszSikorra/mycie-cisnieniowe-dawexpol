@@ -61,11 +61,8 @@ const QuestionsForm = () => {
                 className="questionBox__question"
                 onClick={() => handleClick(qaa)}
               >
-                <p>
-                  <QuestionSign
-                    className="question__sign"
-                    visibility={qaa.visibility}
-                  />
+                <p style={{ position: "relative" }}>
+                  <QuestionSign visibility={qaa.visibility} />
                   <span className="question__text">{qaa.question}</span>
                 </p>
               </div>
