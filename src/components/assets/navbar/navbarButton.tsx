@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, useMatch } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import "./navbar.scss";

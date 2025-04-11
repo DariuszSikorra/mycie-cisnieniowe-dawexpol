@@ -1,8 +1,8 @@
-import React from "react";
 import NavbarButton from "./navbarButton";
 import "./navbar.scss";
+import { Page } from "../../../App";
 
-const Navbar = ({ pages }) => {
+const Navbar = ({ pages }: { pages: Page[] }) => {
   return (
     <ul className="navbar">
       {pages.map((page) => (

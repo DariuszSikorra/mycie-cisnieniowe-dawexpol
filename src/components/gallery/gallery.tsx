@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import CleanImage1 from "../../assets/images/438051730_410006488537906_4884695560442651068_n.jpg";
@@ -34,7 +34,6 @@ import CleanImage30 from "../../assets/images/438124898_2587393961431814_5500192
 import CleanImage31 from "../../assets/images/438124991_411559211641512_2172175257621272467_n.jpg";
 import CleanImage32 from "../../assets/images/438125044_935833158553962_1945687870856661188_n.jpg";
 
-
 import MasonryLayout from "./ContentContainer/ContentContainer";
 
 import "./gallery.scss";
@@ -43,163 +42,163 @@ const photos = [
   {
     id: 0,
     src: CleanImage1,
-    alt: "photo0"
+    alt: "photo0",
   },
   {
     id: 1,
     src: CleanImage2,
-    alt: "photo1"
+    alt: "photo1",
   },
   {
     id: 2,
     src: CleanImage3,
-    alt: "photo2"
+    alt: "photo2",
   },
   {
     id: 3,
     src: CleanImage4,
-    alt: "photo3"
+    alt: "photo3",
   },
   {
     id: 4,
     src: CleanImage5,
-    alt: "photo4"
+    alt: "photo4",
   },
   {
     id: 5,
     src: CleanImage6,
-    alt: "photo5"
+    alt: "photo5",
   },
   {
     id: 6,
     src: CleanImage7,
-    alt: "photo6"
+    alt: "photo6",
   },
   {
     id: 7,
     src: CleanImage8,
-    alt: "photo7"
+    alt: "photo7",
   },
   {
     id: 8,
     src: CleanImage9,
-    alt: "photo8"
+    alt: "photo8",
   },
   {
     id: 9,
     src: CleanImage10,
-    alt: "photo9"
+    alt: "photo9",
   },
   {
     id: 10,
     src: CleanImage11,
-    alt: "photo10"
+    alt: "photo10",
   },
   {
     id: 11,
     src: CleanImage12,
-    alt: "photo11"
+    alt: "photo11",
   },
   {
     id: 12,
     src: CleanImage13,
-    alt: "photo12"
+    alt: "photo12",
   },
   {
     id: 13,
     src: CleanImage14,
-    alt: "photo13"
+    alt: "photo13",
   },
   {
     id: 14,
     src: CleanImage15,
-    alt: "photo14"
+    alt: "photo14",
   },
   {
     id: 15,
     src: CleanImage16,
-    alt: "photo15"
+    alt: "photo15",
   },
   {
     id: 16,
     src: CleanImage17,
-    alt: "photo16"
+    alt: "photo16",
   },
   {
     id: 17,
     src: CleanImage18,
-    alt: "photo17"
+    alt: "photo17",
   },
   {
     id: 18,
     src: CleanImage19,
-    alt: "photo18"
+    alt: "photo18",
   },
   {
     id: 19,
     src: CleanImage20,
-    alt: "photo19"
+    alt: "photo19",
   },
   {
     id: 20,
     src: CleanImage21,
-    alt: "photo20"
+    alt: "photo20",
   },
   {
     id: 21,
     src: CleanImage22,
-    alt: "photo21"
+    alt: "photo21",
   },
   {
     id: 22,
     src: CleanImage23,
-    alt: "photo22"
+    alt: "photo22",
   },
   {
     id: 23,
     src: CleanImage24,
-    alt: "photo23"
+    alt: "photo23",
   },
   {
     id: 24,
     src: CleanImage25,
-    alt: "photo24"
+    alt: "photo24",
   },
   {
     id: 25,
     src: CleanImage26,
-    alt: "photo25"
+    alt: "photo25",
   },
   {
     id: 26,
     src: CleanImage27,
-    alt: "photo26"
+    alt: "photo26",
   },
   {
     id: 27,
     src: CleanImage28,
-    alt: "photo27"
+    alt: "photo27",
   },
   {
     id: 28,
     src: CleanImage29,
-    alt: "photo28"
+    alt: "photo28",
   },
   {
     id: 29,
     src: CleanImage30,
-    alt: "photo29"
+    alt: "photo29",
   },
   {
     id: 30,
     src: CleanImage31,
-    alt: "photo30"
+    alt: "photo30",
   },
   {
     id: 31,
     src: CleanImage32,
-    alt: "photo31"
-  }
+    alt: "photo31",
+  },
 ];
 
 const Gallery = () => {
@@ -210,14 +209,15 @@ const Gallery = () => {
 
   return (
     <div className="main main--gallery">
-      <h1 className="main__title" style={{color: "black"}}>Galeria</h1>
+      <h1 className="main__title" style={{ color: "black" }}>
+        Galeria
+      </h1>
       <hr />
       <div className="main__content">
-
         <div className="content__imgContainer">
           {isMobileScreen && (
             <MasonryLayout columns={1} gap={10}>
-              {photos.map(photo => {
+              {photos.map((photo) => {
                 return (
                   <img
                     style={{ maxWidth: "300px" }}
@@ -231,7 +231,7 @@ const Gallery = () => {
           )}
           {isLargeScreen && (
             <MasonryLayout columns={2} gap={10}>
-              {photos.map(photo => {
+              {photos.map((photo) => {
                 return (
                   <img
                     style={{ maxWidth: "400px" }}

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import CleanImage from "../../assets/images/438125044_935833158553962_1945687870856661188_n.jpg";
 import CleanImage2 from "../../assets/images/438089822_1104436250852636_957264799924397053_n.jpg";
