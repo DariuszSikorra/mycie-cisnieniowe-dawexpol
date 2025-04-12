@@ -103,10 +103,11 @@ const Navbar: React.FC<MobileMenuProps> = ({
       <AppBar position="fixed" sx={{ backgroundColor: "#blue" }}>
         <Toolbar
           style={{
-            maxWidth: "1200px",
-            width: "100%",
+            width: "94%",
+            maxWidth: 1100,
             marginLeft: "auto",
             marginRight: "auto",
+            padding: 0,
           }}
         >
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

@@ -65,9 +65,9 @@ function App() {
   };
 
   return (
-    <AppWrapper>
-      <InternalContainer>
-        <Router>
+    <Router>
+      <AppWrapper>
+        <InternalContainer>
           <Navbar pages={pages} brandName="DAWEX-POL" />
 
           <HeroImageContainer>
@@ -103,9 +103,9 @@ function App() {
           <FooterWrapper>
             <Footer pages={pages} />
           </FooterWrapper>
-        </Router>
-      </InternalContainer>
-    </AppWrapper>
+        </InternalContainer>
+      </AppWrapper>
+    </Router>
   );
 }
 
