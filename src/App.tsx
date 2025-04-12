@@ -6,13 +6,23 @@ import Home from "./components/home/home";
 import QuestionsForm from "./components/questionsForm/questionsForm";
 import ErrorPage from "./components/errorPage/errorPage";
 import Footer from "./components/assets/footer/footer";
+import Navbar from "./components/navbar/navbar";
+
 import CallIcon from "@mui/icons-material/Call";
 
-import Navbar from "./components/navbar/navbar"; // <-- NEW import
+import wallSmall from "./components/assets/wall_small.jpg";
+import wallMedium from "./components/assets/wall_medium.jpg";
+import wallBig from "./components/assets/wall_big.jpg";
 
-import "./App.scss";
-import wall from "./components/assets/wall_mk.2.jpg";
-import { Button } from "@mui/material";
+import {
+  AppWrapper,
+  FooterWrapper,
+  HeroButton,
+  HeroImageContainer,
+  InternalContainer,
+  Main,
+  MainContent,
+} from "./App.styled";
 
 export type Page = {
   id: number;
@@ -53,45 +63,49 @@ function App() {
     console.log("User clicked to contact me!");
     window.location.href = "tel:+48 729 534 719";
   };
+
   return (
-    <div className="app" style={{ width: "100vw" }}>
-      <Router>
-        <Navbar pages={pages} brandName="DAWEX-POL" />
-        <div className="app__image" style={{ position: "relative" }}>
-          <Button
-            variant="contained"
-            onClick={handleContactClick}
-            endIcon={<CallIcon />}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              fontSize: "0.9rem",
-              padding: "0.55rem 0.5rem",
-            }}
-          >
-            Umów się na wycenę
-          </Button>
-          <img className="image" src={wall} alt="WetsandingImage" />
-        </div>
-        <div className="app__main">
-          <Routes>
-            {pages.map((page) => (
-              <Route
-                path={page.path}
-                key={page.id}
-                element={<page.component pages={pages} />}
-              />
-            ))}
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-        </div>
-        <div className="app__footer">
-          <Footer pages={pages} />
-        </div>
-      </Router>
-    </div>
+    <AppWrapper>
+      <InternalContainer>
+        <Router>
+          <Navbar pages={pages} brandName="DAWEX-POL" />
+
+          <HeroImageContainer>
+            <HeroButton
+              variant="contained"
+              onClick={handleContactClick}
+              endIcon={<CallIcon />}
+            >
+              Umów się na wycenę
+            </HeroButton>
+            <picture>
+              <source media="(min-width: 1200px)" srcSet={wallBig} />
+              <source media="(min-width: 600px)" srcSet={wallMedium} />
+              <img src={wallSmall} alt="WetsandingImage" />
+            </picture>
+          </HeroImageContainer>
+
+          <Main>
+            <MainContent>
+              <Routes>
+                {pages.map((page) => (
+                  <Route
+                    path={page.path}
+                    key={page.id}
+                    element={<page.component pages={pages} />}
+                  />
+                ))}
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+            </MainContent>
+          </Main>
+
+          <FooterWrapper>
+            <Footer pages={pages} />
+          </FooterWrapper>
+        </Router>
+      </InternalContainer>
+    </AppWrapper>
   );
 }
 

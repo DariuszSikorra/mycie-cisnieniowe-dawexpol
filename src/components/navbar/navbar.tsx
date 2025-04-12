@@ -101,7 +101,14 @@ const Navbar: React.FC<MobileMenuProps> = ({
   return (
     <>
       <AppBar position="fixed" sx={{ backgroundColor: "#blue" }}>
-        <Toolbar>
+        <Toolbar
+          style={{
+            maxWidth: "1200px",
+            width: "100%",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {brandName}
           </Typography>
@@ -125,8 +132,6 @@ const Navbar: React.FC<MobileMenuProps> = ({
       <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
         {drawerList()}
       </Drawer>
-
-      {/* Offset content from AppBar */}
       <Toolbar />
     </>
   );

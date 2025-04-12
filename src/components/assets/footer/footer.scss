@@ -3,9 +3,11 @@
 .footer {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 .footer__navlinks {
   grid-column: 1 / 2;
+  list-style: none;
   .footer__button {
     padding: 2px;
     .button__link {
