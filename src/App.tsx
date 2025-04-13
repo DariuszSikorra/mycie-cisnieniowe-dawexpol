@@ -10,9 +10,9 @@ import Navbar from "./components/navbar/navbar";
 
 import CallIcon from "@mui/icons-material/Call";
 
-import wallSmall from "./components/assets/wall_small.jpg";
-import wallMedium from "./components/assets/wall_medium.jpg";
-import wallBig from "./components/assets/wall_big.jpg";
+import wallSmall from "./components/assets/sprayer_small.png";
+import wallMedium from "./components/assets/sprayer_medium.png";
+import wallBig from "./components/assets/sprayer_big.png";
 
 import {
   AppWrapper,
