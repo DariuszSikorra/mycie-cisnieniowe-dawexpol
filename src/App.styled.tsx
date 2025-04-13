@@ -20,6 +20,9 @@ export const HeroImageContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   width: "100%",
   overflow: "hidden",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 
   "& picture, & img": {
     width: "100%",
@@ -38,14 +41,11 @@ export const HeroImageContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const HeroButton = styled(Button)(() => ({
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
   padding: "0.6rem 1rem",
   fontSize: "0.9rem",
   whiteSpace: "nowrap",
   maxWidth: "90vw",
+  width: "fit-content",
 }));
 
 export const Main = styled(Box)(({ theme }) => ({

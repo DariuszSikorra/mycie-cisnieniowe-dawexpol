@@ -23,6 +23,7 @@ import {
   Main,
   MainContent,
 } from "./App.styled";
+import { Typography } from "@mui/material";
 
 export type Page = {
   id: number;
@@ -71,13 +72,33 @@ function App() {
           <Navbar pages={pages} brandName="DAWEX-POL" />
 
           <HeroImageContainer>
-            <HeroButton
-              variant="contained"
-              onClick={handleContactClick}
-              endIcon={<CallIcon />}
+            <div
+              style={{
+                position: "absolute",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+              }}
             >
-              Umów się na wycenę
-            </HeroButton>
+              <div>
+                <Typography
+                  component={"h2"}
+                  variant="h2"
+                  style={{ textShadow: "1px 1px 1px black" }}
+                >
+                  Profesjonalne mycie ciśnieniowe
+                </Typography>
+              </div>
+              <HeroButton
+                variant="contained"
+                onClick={handleContactClick}
+                endIcon={<CallIcon />}
+              >
+                Umów się na wycenę
+              </HeroButton>
+            </div>
             <picture>
               <source media="(min-width: 1200px)" srcSet={wallBig} />
               <source media="(min-width: 600px)" srcSet={wallMedium} />
