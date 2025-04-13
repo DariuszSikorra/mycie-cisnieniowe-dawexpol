@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Box, Divider, List, ListItem, Typography } from "@mui/material";
+import { Box, List, ListItem, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import logo from "../logo.png";
 
@@ -55,18 +55,18 @@ const LogoContainer = styled(Box)(() => ({
 
 const Footer = ({ pages }) => {
   return (
-    <FooterContainer component="footer">
+    <FooterContainer>
       <Box>
-        <ContactList component="p">
+        <ContactList>
           <Typography variant="subtitle1" fontWeight="bold">
             Kontakt:&nbsp;
           </Typography>
-          Krzysztof Sikorra- +48 729 534 719
+          +48 729 534 719 - Krzysztof Sikorra
         </ContactList>
 
         <hr />
 
-        <NavList component="ul">
+        <NavList>
           {pages.map((route) => (
             <NavItem key={route.path}>
               <StyledNavLink to={route.path}>{route.name}</StyledNavLink>

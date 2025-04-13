@@ -42,7 +42,8 @@ export const HeroImageContainer = styled(Box)(({ theme }) => ({
 
 export const HeroButton = styled(Button)(() => ({
   padding: "0.6rem 1rem",
-  fontSize: "0.9rem",
+  marginTop: 4,
+  fontSize: "1rem",
   whiteSpace: "nowrap",
   maxWidth: "90vw",
   width: "fit-content",
