@@ -47,23 +47,23 @@ const Navbar: React.FC<MobileMenuProps> = ({
     >
       <List>
         {pages.map((item, i) => (
-          <ListItem
+          <NavLink
             key={item.name}
-            style={{
-              borderBottom: i === pages.length - 1 ? "" : "1px solid gray",
-            }}
-            disablePadding
+            to={item.path}
+            style={{ color: "inherit", textDecoration: "none" }}
+            end
           >
-            <NavLink
-              to={item.path}
-              style={{ color: "inherit", textDecoration: "none" }}
-              end
+            <ListItem
+              style={{
+                borderBottom: i === pages.length - 1 ? "" : "1px solid gray",
+              }}
+              disablePadding
             >
               <ListItemButton>
                 <ListItemText primary={item.name} />
               </ListItemButton>
-            </NavLink>
-          </ListItem>
+            </ListItem>
+          </NavLink>
         ))}
       </List>
     </Box>
