@@ -61,17 +61,3 @@ export const MainContent = styled(Container)(({ theme }) => ({
   maxWidth: "1200px",
   padding: theme.spacing(2),
 }));
-
-export const FooterWrapper = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.grey[900],
-  color: theme.palette.common.white,
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  padding: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: {
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-  },
-}));

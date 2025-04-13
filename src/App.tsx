@@ -16,7 +16,6 @@ import wallBig from "./components/assets/sprayer_big.png";
 
 import {
   AppWrapper,
-  FooterWrapper,
   HeroButton,
   HeroImageContainer,
   InternalContainer,
@@ -121,9 +120,7 @@ function App() {
             </MainContent>
           </Main>
 
-          <FooterWrapper>
-            <Footer pages={pages} />
-          </FooterWrapper>
+          <Footer pages={pages} />
         </InternalContainer>
       </AppWrapper>
     </Router>
