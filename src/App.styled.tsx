@@ -24,14 +24,15 @@ export const HeroImageContainer = styled(Box)(({ theme }) => ({
   "& picture, & img": {
     width: "100%",
     height: "auto",
+    maxHeight: "600px",
     display: "block",
     objectFit: "cover",
 
     [theme.breakpoints.down("sm")]: {
-      maxHeight: "200px",
+      height: "400px",
     },
     [theme.breakpoints.up("lg")]: {
-      maxHeight: "350px",
+      height: "550px",
     },
   },
 }));
