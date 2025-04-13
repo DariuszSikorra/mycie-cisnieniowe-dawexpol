@@ -86,7 +86,7 @@ function App() {
                 <Typography
                   component={"h2"}
                   variant="h2"
-                  style={{ textShadow: "1px 1px 1px black" }}
+                  style={{ textShadow: "1px 2px 1px black" }}
                 >
                   Profesjonalne mycie ciśnieniowe
                 </Typography>
