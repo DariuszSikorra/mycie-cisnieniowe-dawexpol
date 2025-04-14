@@ -99,25 +99,31 @@ const Navbar: React.FC<MobileMenuProps> = ({ pages }) => {
       <AppBar position="fixed" sx={{ backgroundColor: "#blue" }}>
         <Toolbar
           style={{
-            width: "94%",
+            width: "92%",
             maxWidth: 1100,
             marginLeft: "auto",
             marginRight: "auto",
             padding: 0,
           }}
         >
-          <img
-            src={logo}
-            alt="Company Logo"
+          <NavLink
+            to={"/"}
             style={{
               marginRight: "auto",
-              borderRadius: 8,
+              marginLeft: "-0.6rem",
               height: "3rem",
-              width: "auto",
-              marginTop: "auto",
-              marginBottom: "auto",
             }}
-          />
+          >
+            <img
+              src={logo}
+              alt="Company Logo"
+              style={{
+                borderRadius: 8,
+                height: "100%",
+                width: "auto",
+              }}
+            />
+          </NavLink>
 
           {/* Desktop navigation */}
           {navButtonsList()}
@@ -128,7 +134,9 @@ const Navbar: React.FC<MobileMenuProps> = ({ pages }) => {
             color="inherit"
             aria-label="menu"
             onClick={toggleDrawer(true)}
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{
+              display: { md: "none" },
+            }}
           >
             <MenuIcon />
           </IconButton>

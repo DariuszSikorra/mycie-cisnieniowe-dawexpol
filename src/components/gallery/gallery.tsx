@@ -234,6 +234,7 @@ const Gallery = () => {
               {photos.map((photo) => {
                 return (
                   <img
+                    loading="lazy"
                     style={{ maxWidth: "400px" }}
                     src={photo.src}
                     key={photo.id}

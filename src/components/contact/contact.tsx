@@ -2,29 +2,22 @@ import "./contact.scss";
 
 const Contact = () => {
   return (
-    <div className="main main--contact" style={{ color: "black " }}>
+    <div className="main main--contact" style={{ color: "black" }}>
       <h1 className="main__title">Kontakt</h1>
       <hr />
       <div className="main__content">
-        Nasza firma prowadzi prace na terenie województwa Pomorsiego i okolic.
-        <br />
-        <br />
-        Ze względu na mobilny charakter prac prosimy o kontakt <br />
-        telefoniczny lub mailowy: <br />
-        <br />
-        <div className="content__contactkBox">
-          <div className="contactkBox__item1">Tel:</div>
-          <div className="contactkBox__item2">
-            <ul style={{ listStyle: "none" }}>
-              <li>+48 729 534 719</li>
-            </ul>
-          </div>
-          <div className="contactkBox__item3">E-mail:</div>
-          <div className="contactkBox__item4">
-            dawexpolpiaskowanie@gmail.com
-          </div>
+        <p>
+          Nasza firma świadczy usługi na terenie województwa pomorskiego i
+          okolic. Ze względu na mobilny charakter działalności prosimy o
+          kontakt:
+        </p>
+        <div className="content__contactBox">
+          <div className="contactBox__item1">Telefon:</div>
+          <div className="contactBox__item2">+48 729 534 719</div>
+          <div className="contactBox__item3">E-mail:</div>
+          <div className="contactBox__item4">dawexpolpiaskowanie@gmail.com</div>
         </div>
-        <p>Sprawdź nas także na Facebook'u:</p>
+        <p>Sprawdź nas również na Facebooku:</p>
         <div
           className="fb-page"
           data-href="https://www.facebook.com/Dawex-POL-Hyrdopiaskowanie-102353551176728/"
