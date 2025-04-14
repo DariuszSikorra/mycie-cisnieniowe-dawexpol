@@ -2,7 +2,6 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -14,16 +13,13 @@ import { Page } from "../../App";
 import { NavLink } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import logo from "../../components/assets/logo.png";
 
 interface MobileMenuProps {
   pages: Page[];
-  brandName?: string;
 }
 
-const Navbar: React.FC<MobileMenuProps> = ({
-  pages,
-  brandName = "DAWEX-POL",
-}) => {
+const Navbar: React.FC<MobileMenuProps> = ({ pages }) => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
   const toggleDrawer =
@@ -110,9 +106,18 @@ const Navbar: React.FC<MobileMenuProps> = ({
             padding: 0,
           }}
         >
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {brandName}
-          </Typography>
+          <img
+            src={logo}
+            alt="Company Logo"
+            style={{
+              marginRight: "auto",
+              borderRadius: 8,
+              height: "3rem",
+              width: "auto",
+              marginTop: "auto",
+              marginBottom: "auto",
+            }}
+          />
 
           {/* Desktop navigation */}
           {navButtonsList()}

@@ -68,7 +68,7 @@ function App() {
     <Router>
       <AppWrapper>
         <InternalContainer>
-          <Navbar pages={pages} brandName="DAWEX-POL" />
+          <Navbar pages={pages} />
 
           <HeroImageContainer>
             <div
