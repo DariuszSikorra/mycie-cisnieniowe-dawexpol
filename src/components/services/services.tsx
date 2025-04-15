@@ -20,7 +20,7 @@ const Services = () => {
         </ul>
         <p>
           Po czyszczeniu oferujemy <strong>impregnację</strong> oraz opcjonalne
-          <strong>malowanie nawierzchni</strong>.
+          <strong>&nbsp;malowanie nawierzchni</strong>.
         </p>
         <p>
           Świadczymy również usługi <strong>piaskowania</strong> – do
