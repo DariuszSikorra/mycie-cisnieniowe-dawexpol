@@ -25,6 +25,7 @@ import { Typography } from "@mui/material";
 import Services from "./components/services/services";
 import Pricing from "./components/pricing/pricing";
 import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 export type Page = {
   id: number;
@@ -56,14 +57,24 @@ const pages: Page[] = [
 ];
 
 function App() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const handleContactClick = () => {
+    ReactGA.event({
+      category: "Contact",
+      action: "click_call_button",
+      label: "Call Now Header Button",
+    });
+
     window.location.href = "tel:+48 729 534 719";
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: pathname + search });
+  }, [pathname, search]);
 
   return (
     <AppWrapper>
