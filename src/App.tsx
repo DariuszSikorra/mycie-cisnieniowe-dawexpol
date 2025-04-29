@@ -106,7 +106,8 @@ function App() {
               onClick={handleContactClick}
               endIcon={<CallIcon />}
             >
-              Umów się na wycenę
+              Zadzwoń teraz
+              {/* Umów się na wycenę */}
             </HeroButton>
           </div>
           <picture>
