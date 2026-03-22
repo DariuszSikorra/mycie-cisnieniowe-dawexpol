@@ -5,6 +5,7 @@ import Gallery from "./components/gallery/gallery";
 import Home from "./components/home/home";
 import ErrorPage from "./components/errorPage/errorPage";
 import Footer from "./components/assets/footer/footer";
+import MarketingConsentBanner from "./components/marketingConsentBanner/marketingConsentBanner";
 import Navbar from "./components/navbar/navbar";
 
 import CallIcon from "@mui/icons-material/Call";
@@ -133,6 +134,7 @@ function App() {
         </Main>
 
         <Footer pages={pages} />
+        <MarketingConsentBanner />
       </InternalContainer>
     </AppWrapper>
   );
