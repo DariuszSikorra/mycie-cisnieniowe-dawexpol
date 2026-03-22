@@ -27,6 +27,7 @@ import Services from "./components/services/services";
 import Pricing from "./components/pricing/pricing";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
+import { CONTACT_TEL_HREF } from "./components/contactPhoneLink/contactPhoneLink";
 
 export type Page = {
   id: number;
@@ -66,7 +67,7 @@ function App() {
       label: "Call Now Header Button",
     });
 
-    window.location.href = "tel:+48 729 534 719";
+    window.location.href = CONTACT_TEL_HREF;
   };
 
   useEffect(() => {

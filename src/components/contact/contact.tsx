@@ -1,4 +1,8 @@
 import "./contact.scss";
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_TEL_HREF,
+} from "../contactPhoneLink/contactPhoneLink";
 
 const Contact = () => {
   return (
@@ -13,7 +17,9 @@ const Contact = () => {
         </p>
         <div className="content__contactBox">
           <div className="contactBox__item1">Telefon:</div>
-          <div className="contactBox__item2">+48 729 534 719</div>
+          <div className="contactBox__item2">
+            <a href={CONTACT_TEL_HREF}>+48 {CONTACT_PHONE_DISPLAY}</a>
+          </div>
           <div className="contactBox__item3">E-mail:</div>
           <div className="contactBox__item4">dawexpolpiaskowanie@gmail.com</div>
         </div>

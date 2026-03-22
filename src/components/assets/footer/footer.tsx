@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Box, List, ListItem, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import logo from "../logo.png";
+import ContactPhoneLink from "../../contactPhoneLink/contactPhoneLink";
 
 const FooterContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -61,7 +62,22 @@ const Footer = ({ pages }) => {
           <Typography variant="subtitle1" fontWeight="bold">
             Kontakt:&nbsp;
           </Typography>
-          +48 729 534 719 - Krzysztof Sikorra
+          <Typography component="span" variant="body2">
+            +48{" "}
+            <Box
+              component="span"
+              sx={{
+                display: "inline",
+                "& #contact-phone": {
+                  color: "inherit",
+                  textDecoration: "underline",
+                },
+              }}
+            >
+              <ContactPhoneLink />
+            </Box>{" "}
+            - Krzysztof Sikorra
+          </Typography>
         </ContactList>
 
         <hr />

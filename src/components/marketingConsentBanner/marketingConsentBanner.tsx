@@ -3,14 +3,21 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "dawexpol_marketing_consent_v1";
 
-function applyGtagConsent(accepted: boolean) {
-  if (typeof window.gtag !== "function") return;
-  window.gtag("consent", "update", {
-    ad_storage: accepted ? "granted" : "denied",
-    ad_user_data: accepted ? "granted" : "denied",
-    ad_personalization: accepted ? "granted" : "denied",
-    analytics_storage: accepted ? "granted" : "denied",
-    personalization_storage: accepted ? "granted" : "denied",
+function applyGtagConsentAccepted() {
+  window.gtag?.("consent", "update", {
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+    analytics_storage: "granted",
+  });
+}
+
+function applyGtagConsentRejected() {
+  window.gtag?.("consent", "update", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
   });
 }
 
@@ -20,11 +27,11 @@ const MarketingConsentBanner = () => {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === "accepted") {
-      applyGtagConsent(true);
+      applyGtagConsentAccepted();
       return;
     }
     if (stored === "rejected") {
-      applyGtagConsent(false);
+      applyGtagConsentRejected();
       return;
     }
     setVisible(true);
@@ -32,13 +39,13 @@ const MarketingConsentBanner = () => {
 
   const handleAccept = () => {
     localStorage.setItem(STORAGE_KEY, "accepted");
-    applyGtagConsent(true);
+    applyGtagConsentAccepted();
     setVisible(false);
   };
 
   const handleReject = () => {
     localStorage.setItem(STORAGE_KEY, "rejected");
-    applyGtagConsent(false);
+    applyGtagConsentRejected();
     setVisible(false);
   };
 
@@ -90,7 +97,7 @@ const MarketingConsentBanner = () => {
         </Box>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={1} sx={{ flexShrink: 0 }}>
           <Button variant="outlined" color="inherit" onClick={handleReject} size="medium">
-            Odrzuć marketing
+            Odrzuć
           </Button>
           <Button variant="contained" color="primary" onClick={handleAccept} size="medium">
             Akceptuję
